@@ -37,6 +37,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -93,21 +94,22 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                             , contentSacle = ContentScale.Crop)
                     }
                     Text(
-                        text = "Mathieu codabee",
+                        text = stringResource(R.string.name),
                         color = Color.Black,
                         fontSize = 21.sp,
                         fontWeight = FontWeight.W600,
                     )
                 }
                 Spacer(modifier = Modifier.height(20.dp).fillMaxSize())
-                HorizontalDivider(thickness = 2.dp)
+                HorizontalDivider(thickness = 2.dp, color = Color.White)
                 Spacer(modifier = Modifier.height(20.dp).fillMaxSize())
                 Text(
-                    text = "Salut les codeurs, moi c'est Mathieu, je suis ici pour vous apprendre le developpement d'applicationa android avec kotlin et jetpack compose",
+                    text = stringResource(R.string.description),
                     textAlign = TextAlign.Center,
                     fontSize = 18.sp,
-                    fontWeight = FontWeight.W400,
-                    color = Color.Black
+                    fontWeight = FontWeight.W600,
+                    color = Color.White,
+                    fontStyle = FontStyle.Italic
                 )
             }
         }
